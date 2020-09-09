@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+import "./App.css";
+
+import SrcTxt from "./components/srcTxt/srcTxt";
+
+const App = () => {
+  
+  const [txt1, setTxt1] = useState('');
+
+  const SubmitHandler = (e) => {
+    e.preventDefault();
+
+    console.log(e.target.userTxt1.value)
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Howdy</h1>
+      <SrcTxt submitted={SubmitHandler} />
     </div>
   );
-}
+};
 
 export default App;
