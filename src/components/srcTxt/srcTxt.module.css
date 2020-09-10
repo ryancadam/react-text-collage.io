@@ -1,4 +1,18 @@
 .Src {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 12px;
+}
+.Text {
+    margin: 4px;
     font-family: inherit;
+    font-size: 22px;
     resize: none;
+}
+.Btn {
+    display: flex;
+    justify-content: center;
+}
+.Btn :hover {
+    cursor: pointer;
 }
