@@ -6,20 +6,29 @@ import "./App.css";
 import SrcTxt from "./components/srcTxt/srcTxt";
 
 const App = () => {
-  const [txt1, setTxt1] = useState("");
-  const [txt2, setTxt2] = useState("");
+  const [txt1, setTxt1] = useState([]);
+  const [txt2, setTxt2] = useState([]);
 
   const SubmitHandler = (e) => {
     e.preventDefault();
 
-    setTxt1(e.target.userTxt1.value);
-    setTxt2(e.target.userTxt2.value);
+    setTxt1([])
+    setTxt2([])
+    let newTxt1 = e.target.userTxt1.value;
+    let newTxt2 = e.target.userTxt2.value;
+    for (let x = 0; x < newTxt1.length - 31; x += 31) {
+      setTxt1((txt1) => [...txt1, newTxt1.slice(x, x + 31)]);
+    }
+    for (let x = 0; x < newTxt2.length - 31; x += 31) {
+      setTxt2((txt2) => [...txt2, newTxt2.slice(x, x + 31)]);
+    }
   };
+
   return (
     <div>
-      <h1>Howdy</h1>
+      <h1>howdy</h1>
       <SrcTxt submitted={SubmitHandler} />
-      <Collage source1={txt1} source2={txt2} />
+      <Collage cutup1={txt1} cutup2={txt2} />
     </div>
   );
 };
