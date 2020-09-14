@@ -1,0 +1,11 @@
+.Toolbar {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    display: flex;
+    justify-content: space-between;
+    font-family: inherit;
+    padding: 4px;
+    font-size: 22px;
+    background-color: lightslategrey;
+}

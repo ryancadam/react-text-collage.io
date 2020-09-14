@@ -11,22 +11,22 @@ const SrcTxt = (props) => {
           name="userTxt1"
           id="userTxt1"
           placeholder="Copy/paste or type text here. For best results, fill the box!"
-          rows="10"
+          rows="15"
           cols="30"
-          maxLength="400"
+          maxLength="700"
         ></textarea>
         <textarea
           className={style.Text}
           name="userTxt2"
           id="userTxt2"
           placeholder="Copy/paste or type text here. For best results, fill the box!"
-          rows="10"
+          rows="15"
           cols="30"
-          maxLength="400"
+          maxLength="700"
         ></textarea>
       </div>
-      <div className={style.Btn}>
-        <button type="submit">Submit</button>
+      <div className={style.BtnContainer}>
+        <button className={style.Btn} type="submit">Submit</button>
       </div>
     </form>
   );
