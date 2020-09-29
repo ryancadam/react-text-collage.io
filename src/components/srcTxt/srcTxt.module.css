@@ -12,6 +12,8 @@
     border: none;
     box-shadow: 2px 2px 8px black;
     resize: none;
+    outline: none;
+    transition: transform .2s ease-in-out;
 }
 .BtnContainer {
     display: flex;
@@ -20,6 +22,10 @@
 .Btn {
     font-family: inherit;
     font-size: 22px;
+}
+.Text:focus {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px black;
 }
 .Btn:hover {
     cursor: pointer;

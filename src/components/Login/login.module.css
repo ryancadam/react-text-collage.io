@@ -9,7 +9,6 @@
     height: 95%;
     padding: 8px 16px;
     margin: 10px;
-    /* left: 5%; */
     top: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -17,11 +16,17 @@
     box-sizing: border-box;
     transition: all 0.5s ease-in-out;
 }
-.Collage {
-    word-wrap: break-word;
-    text-align: justify;
-    font-size: 20px;
+.BtnContainer {
+    display: flex;
+    justify-content: center;
+}
+.Btn {
     font-family: inherit;
+    font-size: 22px;
+}
+
+.Btn:hover {
+    cursor: pointer;
 }
 
 @media (min-width: 600px) {

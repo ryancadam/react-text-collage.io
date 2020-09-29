@@ -9,6 +9,7 @@ const App = () => {
   const [txt1, setTxt1] = useState([]);
   const [txt2, setTxt2] = useState([]);
   const [showCollage, setShowCollage] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   const SubmitHandler = (e) => {
     e.preventDefault();
@@ -30,9 +31,13 @@ const App = () => {
     setShowCollage(false);
   };
 
+  const LoginHandler = () => {
+    setShowLogin(true);
+  };
+
   return (
     <>
-      <Toolbar />
+      <Toolbar show={showLogin} click={LoginHandler} />
       <div className={style.App}>
         <div style={{ fontSize: "22px" }}>Create a Text Collage!</div>
         <p>Tip - try combining a poem with a news article.</p>

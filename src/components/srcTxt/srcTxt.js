@@ -13,7 +13,7 @@ const SrcTxt = (props) => {
           placeholder="Copy/paste or type text here. For best results, fill the box!"
           rows="15"
           cols="30"
-          maxLength="700"
+          maxLength="1000"
         ></textarea>
         <textarea
           className={style.Text}
@@ -22,7 +22,7 @@ const SrcTxt = (props) => {
           placeholder="Copy/paste or type text here. For best results, fill the box!"
           rows="15"
           cols="30"
-          maxLength="700"
+          maxLength="1000"
         ></textarea>
       </div>
       <div className={style.BtnContainer}>
