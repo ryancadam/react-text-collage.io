@@ -1,0 +1,50 @@
+.Card {
+    position: fixed;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    z-index: 500;
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    padding: 16px;
+    margin: 10px;
+    top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px black;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+  .NewUserContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 14px;
+  }
+  .NewUser {
+    font-family: inherit;
+    font-size: 22px;
+    margin: 4px;
+  }
+  .BtnContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .Btn {
+    font-family: inherit;
+    font-size: 22px;
+  }
+  
+  .Btn:hover {
+    cursor: pointer;
+  }
+  
+  @media (min-width: 600px) {
+    .Card {
+      width: 500px;
+      left: calc(50% - 250px);
+    }
+  }
+  

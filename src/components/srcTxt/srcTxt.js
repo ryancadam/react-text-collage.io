@@ -4,7 +4,7 @@ import style from "./srcTxt.module.css";
 
 const SrcTxt = (props) => {
   return (
-    <form onSubmit={props.submitted}>
+    <form onSubmit={props.submitSrc}>
       <div className={style.Src}>
         <textarea
           className={style.Text}

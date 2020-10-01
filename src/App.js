@@ -6,12 +6,12 @@ import SrcTxt from "./components/srcTxt/srcTxt";
 import Toolbar from "./components/Toolbar/Toolbar";
 
 const App = () => {
+  //collage state
   const [txt1, setTxt1] = useState([]);
   const [txt2, setTxt2] = useState([]);
   const [showCollage, setShowCollage] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
 
-  const SubmitHandler = (e) => {
+  const SrcSubmitHandler = (e) => {
     e.preventDefault();
 
     setTxt1([]);
@@ -31,17 +31,13 @@ const App = () => {
     setShowCollage(false);
   };
 
-  const LoginHandler = () => {
-    setShowLogin(true);
-  };
-
   return (
     <>
-      <Toolbar show={showLogin} click={LoginHandler} />
+      <Toolbar />
       <div className={style.App}>
         <div style={{ fontSize: "22px" }}>Create a Text Collage!</div>
         <p>Tip - try combining a poem with a news article.</p>
-        <SrcTxt submitted={SubmitHandler} />
+        <SrcTxt submitSrc={SrcSubmitHandler} />
         <Collage
           show={showCollage}
           closed={CloseCollageHandler}
